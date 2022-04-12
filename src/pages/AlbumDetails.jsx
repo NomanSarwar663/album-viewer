@@ -18,7 +18,7 @@ const SecondPage = () => {
     }
   }
   function prevAlbum() {
-    if (index > albums.length - 1) {
+    if (index > 0) {
       setindex(index - 1);
     }
   }
@@ -68,11 +68,11 @@ const SecondPage = () => {
               >
                 <Typography variant="h5">Genres:</Typography>
                 <Box sx={{ textAlign: "left", ml: 2 }}>
-                  <Typography>
+                  <Typography variant="h6" >
                     {" "}
-                    {albums?.length ? albums[index].Artist : null}{" "}
+                    {albums?.length ? albums[index].Genres : null}{" "}
                   </Typography>
-                  <Typography>
+                  <Typography variant="body2">
                     {" "}
                     {albums?.length ? albums[index].Sec_Genres : null}{" "}
                   </Typography>
@@ -87,7 +87,7 @@ const SecondPage = () => {
               >
                 <Typography variant="h5">Descriptors:</Typography>
                 <Box sx={{ textAlign: "left", ml: 2 }}>
-                  <Typography>
+                  <Typography variant="h6">
                     {" "}
                     {albums?.length ? albums[index].Descriptors : null}{" "}
                   </Typography>
