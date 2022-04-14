@@ -7,7 +7,7 @@ const SearchBar = ({ searchHandler, selected }) => {
   const navigate = useNavigate();
 
   const onClickHandler = () => {
-    const param = selected.join(", ")
+    const param = selected.join(", ");
     navigate(`/albums/${param}`);
   };
   return (
@@ -47,11 +47,11 @@ const SearchBar = ({ searchHandler, selected }) => {
         </Box>
         <Button
           disabled={selected.length === 0}
-          sx={{ ml: 2, borderRadius: "8px" }}
+          sx={{ ml: 2, borderRadius: "8px", backgroundColor: "#3e777b" }}
           variant="contained"
           onClick={onClickHandler}
         >
-          Go to Albums
+          Get Albums
         </Button>
       </Box>
     </>
