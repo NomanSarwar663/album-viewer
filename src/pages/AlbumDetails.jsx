@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import { Typography, Button } from "@mui/material";
 import Footer from "./Footer";
 
-const SecondPage = () => {
+const AlbumDetails = () => {
   let { albumQuery } = useParams();
   const searchQuery = encodeURI(`[${albumQuery}]`);
 
@@ -44,7 +44,7 @@ const SecondPage = () => {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                maxWidth: { xs: "250px", md: "150px" },
+                maxWidth: "250px",
               }}
             >
               <img
@@ -65,7 +65,7 @@ const SecondPage = () => {
             }}
           >
             <Typography
-              variant="h4"
+              variant="h5"
               sx={{ textAlign: "center", color: "white" }}
             >
               {albums?.length ? albums[index].Album_Name : null}
@@ -84,10 +84,10 @@ const SecondPage = () => {
               <Box
                 sx={{
                   display: "flex",
-                  mt: 4,
+                  mt: 2,
                 }}
               >
-                <Typography variant="h5">Artist:</Typography>
+                <Typography variant="h6">Artist:</Typography>
                 <Box sx={{ textAlign: "left", ml: 12, color: "#c7cdc1" }}>
                   <Typography variant="h6">
                     {albums?.length ? albums[index].Artist : null}{" "}
@@ -98,10 +98,10 @@ const SecondPage = () => {
               <Box
                 sx={{
                   display: "flex",
-                  mt: 4,
+                  mt: 2,
                 }}
               >
-                <Typography variant="h5">Genres:</Typography>
+                <Typography variant="h6">Genres:</Typography>
                 <Box sx={{ textAlign: "left", ml: 10, color: "#c7cdc1" }}>
                   <Typography variant="h6">
                     {" "}
@@ -116,11 +116,11 @@ const SecondPage = () => {
               <Box
                 sx={{
                   display: "flex",
-                  mt: 4,
+                  mt: 2,
                 }}
               >
                 {/* Descriptors */}
-                <Typography variant="h5">Descriptors:</Typography>
+                <Typography variant="h6">Descriptors:</Typography>
                 <Box sx={{ textAlign: "left", ml: 4, color: "#c7cdc1" }}>
                   <Typography variant="h6">
                     {" "}
@@ -134,19 +134,29 @@ const SecondPage = () => {
             sx={{
               display: "flex",
               justifyContent: "space-evenly",
-              margin: "5% 10px",
+              margin: "20px",
             }}
           >
             <Button
               variant="contained"
-              sx={{ backgroundColor: "#3e777b" }}
+              sx={{
+                backgroundColor: "#3e777b",
+                "&:hover": {
+                  backgroundColor: "#3e777b",
+                },
+              }}
               onClick={prevAlbum}
             >
               Previous
             </Button>
             <Button
               variant="contained"
-              sx={{ backgroundColor: "#3e777b" }}
+              sx={{
+                backgroundColor: "#3e777b",
+                "&:hover": {
+                  backgroundColor: "#3e777b",
+                },
+              }}
               onClick={nextAlbum}
             >
               Next
@@ -167,4 +177,4 @@ const SecondPage = () => {
   );
 };
 
-export default SecondPage;
+export default AlbumDetails;

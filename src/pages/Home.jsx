@@ -20,9 +20,12 @@ const HomePage = () => {
     if (search === "") {
       return setFilteredtags([]);
     }
-    const filteredTags = tags.filter((tag) => {
-      return tag.toLowerCase().includes(search.toLowerCase());
-    });
+    const filteredTags = tags
+      .filter((tag) => {
+        return tag.toLowerCase().includes(search.toLowerCase());
+      })
+      .slice(0, 10);
+
     setFilteredtags(filteredTags);
   };
 

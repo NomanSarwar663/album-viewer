@@ -47,7 +47,14 @@ const SearchBar = ({ searchHandler, selected }) => {
         </Box>
         <Button
           disabled={selected.length === 0}
-          sx={{ ml: 2, borderRadius: "8px", backgroundColor: "#3e777b" }}
+          sx={{
+            ml: 2,
+            borderRadius: "8px",
+            backgroundColor: "#3e777b",
+            "&:hover": {
+              backgroundColor: "#3e777b",
+            },
+          }}
           variant="contained"
           onClick={onClickHandler}
         >
