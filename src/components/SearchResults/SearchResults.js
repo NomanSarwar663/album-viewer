@@ -6,13 +6,13 @@ const SearchResults = ({ filteredTags, selected, chipHandler }) => {
     chipNotSelected: {
       backgroundColor: "#239E82",
       color: "white",
-      margin: "10px 3%",
+      margin: "10px 1%",
       border: "none",
     },
     chipSelected: {
       backgroundColor: "#116955",
       color: "white",
-      margin: "10px 3%",
+      margin: "10px 1%",
       border: "none",
     },
   };
@@ -23,7 +23,6 @@ const SearchResults = ({ filteredTags, selected, chipHandler }) => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          // minHeight: "80vh",
           mb: 4,
         }}
       >
